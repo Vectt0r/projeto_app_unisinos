@@ -1,0 +1,13 @@
+.custom-button {
+    --background: #2560ce; /* Cor de fundo */
+    --background-activated: #f8f8fa; /* Cor ao clicar */
+    --border-radius: 20px; /* Bordas arredondadas */
+    --color: white; /* Cor do texto */
+    --padding-start: 20px;
+    --padding-end: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    border: 1px solid #fdfdfd; /* Borda */
+  }
+  
