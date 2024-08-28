@@ -2,7 +2,10 @@
   <ion-toolbar>
     <ion-title>Biblioteca Virtual</ion-title>
     <ion-buttons slot="end">
-      <ion-button [routerLink]="['/books-form']">Adicionar Livro</ion-button>
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Sair
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -20,3 +23,14 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/books-form']">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        Adicionar Livro
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

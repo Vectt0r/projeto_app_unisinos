@@ -23,4 +23,9 @@ export class BooksPage {
     this.bookService.deleteBook(id);
     this.books = this.bookService.getBooks();
   }
+
+  logout() {
+    // Redireciona para a tela de login
+    this.router.navigate(['/login']);
+  }
 }
