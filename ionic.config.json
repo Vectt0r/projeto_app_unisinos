@@ -1,0 +1,7 @@
+{
+  "name": "biblioteca_virt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
