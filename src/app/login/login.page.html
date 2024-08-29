@@ -4,16 +4,36 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <form (ngSubmit)="login()">
-    <ion-item>
-      <ion-label position="floating">Usuário</ion-label>
-      <ion-input [(ngModel)]="username" name="username" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Senha</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit">Entrar</ion-button>
-  </form>
+<ion-content class="ion-padding login-content">
+  <div class="login-container">
+    <form (ngSubmit)="login()" class="login-form">
+      <h2 class="login-title">Bem-vindo!</h2>
+      <ion-item lines="none" class="login-item">
+        <ion-label position="floating">Usuário</ion-label>
+        <ion-input
+          [(ngModel)]="username"
+          name="username"
+          required
+          type="text"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="login-item">
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+        ></ion-input>
+      </ion-item>
+      <ion-button
+        expand="block"
+        type="submit"
+        class="login-button"
+        color="primary"
+      >
+        Entrar
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

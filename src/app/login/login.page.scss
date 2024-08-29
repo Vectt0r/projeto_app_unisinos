@@ -1,0 +1,32 @@
+.login-content {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100%; /* Garante que o conteúdo ocupe toda a altura disponível */
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima para evitar que fique muito largo em telas grandes */
+    padding: 16px; /* Adiciona um pouco de padding ao redor do container */
+    margin-top: 85px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Adiciona espaço entre os itens do formulário */
+  }
+  
+  .login-title {
+    text-align: center; /* Centraliza o título */
+  }
+  
+  .login-item {
+    margin-bottom: 16px; /* Adiciona espaço entre os itens do formulário */
+  }
+  
+  .login-button {
+    margin-top: 16px; /* Adiciona espaço acima do botão */
+  }
+  
