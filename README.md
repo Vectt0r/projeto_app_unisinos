@@ -28,7 +28,7 @@
 
 em caso do seguinte erro 
 
-ionic : O arquivo C:\Users\Douglas\AppData\Roaming\npm\ionic.ps1 não pode ser carregado porque a execução de scripts foi desabilitada neste sistema. Para obter mais informações, consulte about_Execution_Policies em 
+ionic : O arquivo C:\Users\-------------------------------ionic.ps1 não pode ser carregado porque a execução de scripts foi desabilitada neste sistema. Para obter mais informações, consulte about_Execution_Policies em 
 https://go.microsoft.com/fwlink/?LinkID=135170.
 No linha:1 caractere:1
 + ionic serve
