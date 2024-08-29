@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BooksFormPage } from './books-form.page';
+import { BookFormPage } from './books-form.page';
 
 describe('BooksFormPage', () => {
-  let component: BooksFormPage;
-  let fixture: ComponentFixture<BooksFormPage>;
+  let component: BookFormPage;
+  let fixture: ComponentFixture<BookFormPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BooksFormPage);
+    fixture = TestBed.createComponent(BookFormPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

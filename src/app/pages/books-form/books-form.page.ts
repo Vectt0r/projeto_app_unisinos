@@ -9,7 +9,7 @@ import { Book, BookService } from '../../services/book.service';
   templateUrl: './books-form.page.html',
   styleUrls: ['./books-form.page.scss'],
 })
-export class BookFormPage {
+export class BookFormPage { 
   book: Book = { id: 0, titulo: '', autor: '', year: 0 };
 
   constructor(

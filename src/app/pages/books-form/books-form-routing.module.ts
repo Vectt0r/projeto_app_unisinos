@@ -4,10 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookFormPage } from './books-form.page';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: BookFormPage
-  }
+  { path: '', component: BookFormPage },
+  { path: ':id', component: BookFormPage },
 ];
 
 @NgModule({

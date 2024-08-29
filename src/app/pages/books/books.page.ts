@@ -16,7 +16,7 @@ export class BooksPage {
   }
 
   editBook(id: number) {
-    this.router.navigate(['/book-form', { id }]);
+    this.router.navigate(['/books-form', id]);
   }
 
   deleteBook(id: number) {
