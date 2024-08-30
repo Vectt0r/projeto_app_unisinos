@@ -73,5 +73,20 @@ npx cap sync
 
 npx cap open android
 
+Login
+
+![image](https://github.com/user-attachments/assets/05f61a2f-ff73-4043-8332-2cebd7dffe14)
+
+home
+![image](https://github.com/user-attachments/assets/424c8a90-1221-46c8-8c41-1b609578cc80)
+
+add livro
+
+![image](https://github.com/user-attachments/assets/6c9beb34-c15d-464c-b70e-dabb5a2bb2e0)
+
+
+
+
+
 
 
