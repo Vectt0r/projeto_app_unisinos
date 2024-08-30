@@ -57,6 +57,21 @@ Set-ExecutionPolicy RemoteSigned
 Quando solicitado, confirme a alteração digitando A (para "Sim para todos").
 Tente novamente o comando ionic serve
 
+comando para abrir no android studio
+
+build 
+
+
+npm run build
+
+
+atualizar emulador
+
+
+npx cap sync
+
+
+npx cap open android
 
 
 
