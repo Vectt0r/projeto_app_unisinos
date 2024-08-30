@@ -1,0 +1,14 @@
+.button-container {
+  display: flex; /* Para centralizar o botão */
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+ion-button {
+  --color: white; /* Cor do texto */
+  --padding: 12px 24px; /* Espaçamento interno */
+  --icon-size: 24px; /* Tamanho do ícone dsa*/
+  --background: #4CAF50 !important;
+  --border-radius: 10px !important;
+
+}

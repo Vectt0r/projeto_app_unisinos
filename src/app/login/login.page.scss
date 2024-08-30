@@ -1,32 +1,84 @@
+/* Estilos para o container de login */
 .login-content {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100%; /* Garante que o conteÃºdo ocupe toda a altura disponÃ­vel */
-  }
-  
-  .login-container {
-    width: 100%;
-    max-width: 400px; /* Limita a largura mÃ¡xima para evitar que fique muito largo em telas grandes */
-    padding: 16px; /* Adiciona um pouco de padding ao redor do container */
-    margin-top: 85px;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* Adiciona espaÃ§o entre os itens do formulÃ¡rio */
-  }
-  
-  .login-title {
-    text-align: center; /* Centraliza o tÃ­tulo */
-  }
-  
-  .login-item {
-    margin-bottom: 16px; /* Adiciona espaÃ§o entre os itens do formulÃ¡rio */
-  }
-  
-  .login-button {
-    margin-top: 16px; /* Adiciona espaÃ§o acima do botÃ£o */
-  }
-  
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100%; /* Garante que o conteúdo ocupe toda a altura disponível */
+}
+
+/* Estilos para o container do formulário de login */
+.login-container {
+  width: 100%;
+  max-width: 400px; /* Limita a largura máxima para evitar que fique muito largo em telas grandes */
+  padding: 16px; /* Adiciona um pouco de padding ao redor do container */
+  margin-top: 30px; /* Margem superior */
+}
+
+/* Estilos para o formulário de login */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Adiciona espaço entre os itens do formulário */
+}
+
+/* Estilos para o título do formulário de login */
+.login-title {
+  text-align: center; /* Centraliza o título */
+}
+
+/* Estilos para os itens do formulário */
+.login-item {
+  margin-bottom: 16px; /* Adiciona espaço entre os itens do formulário */
+}
+
+/* Estilos para o botão de login */
+.login-button {
+  margin-top: 10px; /* Adiciona espaço acima do botão */
+  width: 100%; /* Largura completa do botão */
+}
+
+/* Estilo para o botão de login */
+ion-button.login-button {
+  --background: #0e9958 !important; /* Cor de fundo azul, forçado com !important */
+  --color: #ffffff !important; /* Cor do texto branco, forçado com !important */
+  --border-radius: 5px; /* Bordas arredondadas para combinar com o input */
+  --padding-start: 16px; /* Espaçamento interno à esquerda */
+  --padding-end: 16px; /* Espaçamento interno à direita */
+  --padding-top: 12px; /* Espaçamento interno no topo */
+  --padding-bottom: 12px; /* Espaçamento interno na base */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+  transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+  margin-left: 80px;
+  width: 50%;
+}
+
+/* Estilo adicional para o botão ao passar o mouse */
+ion-button.login-button:hover {
+  --background: #2082eb; /* Cor de fundo quando o mouse está sobre o botão */
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão ao passar o mouse */
+}
+
+/* Estilo para a label flutuante dentro do ion-item */
+.login-item ion-label {
+  --color: #000000; /* Cor da label */
+  font-size: 14px; /* Tamanho da fonte da label */
+}
+
+/* Estilo para o ion-input dentro do ion-item */
+.login-item ion-input {
+  --background: #e0f7fa; /* Fundo azul claro para o campo de entrada */
+  --border-color: #0a0a0a; /* Cor da borda */
+  --border-width: 1px; /* Largura da borda */
+  --border-style: solid; /* Estilo da borda */
+  --border-radius: 5px; /* Borda arredondada */
+  padding: 5px; /* Espaçamento interno */
+  color: #333; /* Cor do texto */
+  width: 100%; /* Largura completa do campo de entrada */
+}
+
+/* Estilo adicional para o campo de entrada com placeholder visível */
+.login-item ion-input::part(native) {
+  padding-top: 18px; /* Espaço para a label flutuante */
+}

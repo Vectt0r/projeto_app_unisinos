@@ -18,19 +18,35 @@
         <p>Autor: {{ book.autor }}</p>
         <p>Ano: {{ book.year }}</p>
       </ion-label>
-      <ion-button fill="outline" (click)="editBook(book.id)">Editar</ion-button>
-      <ion-button color="danger" (click)="deleteBook(book.id)">Excluir</ion-button>
+
+      <!-- Botão de edição com ícone -->
+      <ion-button fill="" (click)="editBook(book.id)">
+        <ion-icon slot="icon-only" name="pencil-outline" size="large"></ion-icon>
+      </ion-button>
+
+      <!-- Botão de exclusão com ícone -->
+      <ion-button color="danger" fill="" (click)="deleteBook(book.id)">
+        <ion-icon slot="icon-only" name="trash-outline" size="large" ></ion-icon>
+      </ion-button>
+
+      <ion-button color="danger" fill="" (click)="deleteBook(book.id)">
+        <ion-icon name="eye-outline" size="large" ></ion-icon>      
+      </ion-button>
+
     </ion-item>
   </ion-list>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button [routerLink]="['/books-form']">
-        <ion-icon name="add-circle-outline"></ion-icon>
-        Adicionar Livro
+    <div class="button-container">
+      <ion-button class="custom-button" [routerLink]="['/books-form']">
+        <ion-icon name="add-circle-outline" size="large"></ion-icon>
       </ion-button>
-    </ion-buttons>
+    </div>
   </ion-toolbar>
 </ion-footer>
+
+
+
+

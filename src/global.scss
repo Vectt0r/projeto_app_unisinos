@@ -10,7 +10,7 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/core.css";/*
 
 /* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
@@ -19,6 +19,7 @@
 @import "@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
+/**
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
 @import "@ionic/angular/css/text-alignment.css";
@@ -35,3 +36,51 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 /*@import "@ionic/angular/css/palettes/dark.system.css"; */
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza o botão horizontalmente */
+    margin-top: 5px; /* Espaçamento superior */
+  }
+  
+  ion-button.custom-button {
+    --background: #4CAF50; /* Cor de fundo do botão */
+    --border-radius: 10px; /* Borda arredondada */
+    --color: white; /* Cor do texto */
+    --padding-start: 12px; /* Espaçamento interno à esquerda */
+    --padding-end: 12px; /* Espaçamento interno à direita */
+    --padding-top: 8px; /* Espaçamento interno no topo */
+    --padding-bottom: 8px; /* Espaçamento interno na base */
+    --ripple-color: white; /* Cor de ripple ao clicar */
+    width: auto; /* Defina a largura como necessário */
+    height: 48px; /* Defina a altura como necessário */
+    margin-bottom: 10px;
+}
+
+ion-button.custom-button-salvar {
+    --background: #4CAF50; /* Cor de fundo do botão */
+    --color: white; /* Cor do texto */
+    --padding-start: 16px; /* Espaçamento interno à esquerda */
+    --padding-end: 16px; /* Espaçamento interno à direita */
+    --padding-top: 12px; /* Espaçamento interno no topo */
+    --padding-bottom: 12px; /* Espaçamento interno na base */
+    --ripple-color: white; /* Cor de ripple ao clicar */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 90%; /* Largura do botão */
+    margin: 10px auto; /* Margem superior/inferior e centralizado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  ion-button.custom-button-salvar:hover {
+    --background: #e8edf1; /* Cor de fundo no hover */
+  }
+  
+  ion-button.custom-button-salvar::part(native) {
+    border-radius: 10px; /* Borda arredondada */
+  }
+
+  ion-button.custom-button-salvar:active {
+    --background: #a4ffb4; /* Cor de fundo quando ativo */
+    transform: scale(0.98); /* Pequeno efeito de escala ao clicar */
+  }
+  
