@@ -10,7 +10,7 @@ import { Book, BookService } from '../../services/book.service';
   styleUrls: ['./books-form.page.scss'],
 })
 export class BookFormPage { 
-  book: Book = { id: 0, titulo: '', autor: '', year: 0 };
+  book: Book = { id: 0, nome_livro: '', nome_autor: '', genero: '', editora: '',  numero_paginas: 0};
 
   constructor(
     private bookService: BookService,

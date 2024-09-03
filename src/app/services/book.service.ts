@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 
 export interface Book {
   id: number;
-  titulo: string;
-  autor: string;
-  year: number;
+  nome_livro: string;
+  nome_autor: string;
+  genero: string;
+  editora: string;
+  numero_paginas: 0;
 }
 
 @Injectable({

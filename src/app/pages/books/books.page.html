@@ -14,9 +14,10 @@
   <ion-list>
     <ion-item *ngFor="let book of books">
       <ion-label>
-        <h2>{{ book.titulo }}</h2>
-        <p>Autor: {{ book.autor }}</p>
-        <p>Ano: {{ book.year }}</p>
+        <h2>{{ book.nome_livro }}</h2>
+        <p>Autor: {{ book.nome_autor }}</p>
+        <p>Ano: {{ book.genero }}</p>
+        <p>Numero de Paginas: {{ book.numero_paginas }}</p>
       </ion-label>
 
       <!-- Botão de edição com ícone -->
@@ -24,13 +25,13 @@
         <ion-icon slot="icon-only" name="pencil-outline" size="large"></ion-icon>
       </ion-button>
 
+      <ion-button color="danger" fill="" (click)="deleteBook(book.id)">
+        <ion-icon name="eye-outline" size="large" ></ion-icon>      
+      </ion-button>
+
       <!-- Botão de exclusão com ícone -->
       <ion-button color="danger" fill="" (click)="deleteBook(book.id)">
         <ion-icon slot="icon-only" name="trash-outline" size="large" ></ion-icon>
-      </ion-button>
-
-      <ion-button color="danger" fill="" (click)="deleteBook(book.id)">
-        <ion-icon name="eye-outline" size="large" ></ion-icon>      
       </ion-button>
 
     </ion-item>
