@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { BookFormPage } from './books-form.page';
+import { BooksFormPage } from './books-form.page';  // Corrigido de BookFormPage para BooksFormPage
 
 const routes: Routes = [
-  { path: '', component: BookFormPage },
-  { path: ':id', component: BookFormPage },
+  { path: '', component: BooksFormPage },
+  { path: ':id', component: BooksFormPage },
 ];
 
 @NgModule({

@@ -12,16 +12,23 @@ export class BooksPage {
   constructor(private bookService: BookService, private router: Router) {}
 
   ionViewWillEnter() {
-    this.books = this.bookService.getBooks();
+    this.loadBooks(); // Carrega os livros ao entrar na página
+  }
+
+  loadBooks() {
+    this.bookService.getBooks().subscribe((data: Book[]) => {
+      this.books = data; // Inscreve-se no Observable para obter os dados
+    });
   }
 
   editBook(id: number) {
-    this.router.navigate(['/books-form', id]);
+    this.router.navigate(['/books-form', id]); // Navega para o formulário de edição de livros
   }
 
   deleteBook(id: number) {
-    this.bookService.deleteBook(id);
-    this.books = this.bookService.getBooks();
+    this.bookService.deleteBook(id).subscribe(() => {
+      this.loadBooks(); // Atualiza a lista de livros após a exclusão
+    });
   }
 
   logout() {

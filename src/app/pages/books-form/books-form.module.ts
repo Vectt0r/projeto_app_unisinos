@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { BooksFormPageRoutingModule } from './books-form-routing.module';
 
-import { BookFormPage } from './books-form.page';
+import { BooksFormPage } from './books-form.page';  // Corrigido de BookFormPage para BooksFormPage
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { BookFormPage } from './books-form.page';
     IonicModule,
     BooksFormPageRoutingModule
   ],
-  declarations: [BookFormPage]
+  declarations: [BooksFormPage]
 })
 export class BooksFormPageModule {}

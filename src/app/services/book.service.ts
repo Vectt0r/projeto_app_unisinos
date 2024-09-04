@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export interface Book {
   id: number;
@@ -6,39 +8,34 @@ export interface Book {
   nome_autor: string;
   genero: string;
   editora: string;
-  numero_paginas: 0;
+  numero_paginas: number;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
-  private books: Book[] = [];
-  private nextId = 1;
+  private apiUrl = 'http://localhost:3000/api/books'; // URL base da API
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getBooks(): Book[] {
-    return this.books;
+  getBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(`${this.apiUrl}/ExibirBiblioteca`);
   }
 
-  getBookById(id: number): Book | undefined {
-    return this.books.find(book => book.id === id);
+  getBookById(id: number): Observable<Book> {
+    return this.http.get<Book>(`${this.apiUrl}/${id}`);
   }
 
-  addBook(book: Book) {
-    book.id = this.nextId++;
-    this.books.push(book);
+  addBook(book: Omit<Book, 'id'>): Observable<Book> {
+    return this.http.post<Book>(`${this.apiUrl}/AdicionarLivro`, book);
   }
 
-  updateBook(updatedBook: Book) {
-    const index = this.books.findIndex(book => book.id === updatedBook.id);
-    if (index !== -1) {
-      this.books[index] = updatedBook;
-    }
+  updateBook(book: Book): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${book.id}`, book);
   }
 
-  deleteBook(id: number) {
-    this.books = this.books.filter(book => book.id !== id);
+  deleteBook(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }
