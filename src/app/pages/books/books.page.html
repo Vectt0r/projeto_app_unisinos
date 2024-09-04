@@ -20,16 +20,18 @@
         <p>Numero de Paginas: {{ book.numero_paginas }}</p>
       </ion-label>
 
-      <!-- Botão de edição com ícone -->
+      <!--editar livro -->
       <ion-button fill="" (click)="editBook(book.id)">
         <ion-icon slot="icon-only" name="pencil-outline" size="large"></ion-icon>
       </ion-button>
 
-      <ion-button color="danger" fill="" (click)="deleteBook(book.id)">
-        <ion-icon name="eye-outline" size="large" ></ion-icon>      
+      <!--visualizar livro -->
+      <!-- Visualizar livro -->
+      <ion-button color="danger" fill="" (click)="viewBook(book.id)">
+        <ion-icon name="eye-outline" size="large"></ion-icon>
       </ion-button>
 
-      <!-- Botão de exclusão com ícone -->
+      <!--excluir livro -->
       <ion-button color="danger" fill="" (click)="deleteBook(book.id)">
         <ion-icon slot="icon-only" name="trash-outline" size="large" ></ion-icon>
       </ion-button>

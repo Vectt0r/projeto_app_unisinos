@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Voltar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Visualizar Livro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #bookForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input [(ngModel)]="book.nome_livro" name="nome_livro" required readonly></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Gênero</ion-label>
+      <ion-input [(ngModel)]="book.genero" name="genero" required readonly></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Autor</ion-label>
+      <ion-input [(ngModel)]="book.nome_autor" name="nome_autor" required readonly></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Editora</ion-label>
+      <ion-input [(ngModel)]="book.editora" name="editora" required readonly></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número de Páginas</ion-label>
+      <ion-input type="number" [(ngModel)]="book.numero_paginas" name="numero_paginas" required readonly></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

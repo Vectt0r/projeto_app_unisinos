@@ -11,12 +11,14 @@
 </ion-header>
 
 <ion-content>
+    <!--    //após a verificação dos campos, submete o formulario para a acão de salvar-->
   <form #bookForm="ngForm" (ngSubmit)="submitForm()" novalidate>
 
     <ion-item>
       <ion-label position="floating">Título</ion-label>
       <ion-input [(ngModel)]="book.nome_livro" name="nome_livro" required></ion-input>
     </ion-item>
+    <!--    //verficação do campo para garantir que o usuario entrou com os dados-->
     <ion-note *ngIf="bookForm.submitted && !bookForm.controls['nome_livro']?.valid" color="danger">
       Título é obrigatório.
     </ion-note>
@@ -25,6 +27,7 @@
       <ion-label position="floating">Gênero</ion-label>
       <ion-input [(ngModel)]="book.genero" name="genero" required></ion-input>
     </ion-item>
+    <!--    //verficação do campo para garantir que o usuario entrou com os dados-->
     <ion-note *ngIf="bookForm.submitted && !bookForm.controls['genero']?.valid" color="danger">
       Gênero é obrigatório.
     </ion-note>
@@ -33,6 +36,7 @@
       <ion-label position="floating">Autor</ion-label>
       <ion-input [(ngModel)]="book.nome_autor" name="nome_autor" required></ion-input>
     </ion-item>
+    <!--    //verficação do campo para garantir que o usuario entrou com os dados-->
     <ion-note *ngIf="bookForm.submitted && !bookForm.controls['nome_autor']?.valid" color="danger">
       Autor é obrigatório.
     </ion-note>
@@ -41,6 +45,7 @@
       <ion-label position="floating">Editora</ion-label>
       <ion-input [(ngModel)]="book.editora" name="editora" required></ion-input>
     </ion-item>
+    <!--    //verficação do campo para garantir que o usuario entrou com os dados-->
     <ion-note *ngIf="bookForm.submitted && !bookForm.controls['editora']?.valid" color="danger">
       Editora é obrigatória.
     </ion-note>
@@ -49,6 +54,7 @@
       <ion-label position="floating">Número de Páginas</ion-label>
       <ion-input type="number" [(ngModel)]="book.numero_paginas" name="numero_paginas" required></ion-input>
     </ion-item>
+    <!--    //verficação do campo para garantir que o usuario entrou com os dados-->
     <ion-note *ngIf="bookForm.submitted && !bookForm.controls['numero_paginas']?.valid" color="danger">
       Número de páginas é obrigatório.
     </ion-note>
